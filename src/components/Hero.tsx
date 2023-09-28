@@ -21,19 +21,17 @@ export const Hero = () => {
             FrontEnd Developer
           </h3>
           <p className="text-center lg:text-left font-medium text-lg text-gray-500">
-            Experienced <span className="text-yellow-300">JavaScript</span> and{" "}
-            <span className="text-cyan-400">TypeScript</span> developer
-            specializing in <span className="text-blue-400">React</span> and{" "}
-            <span className="text-blue-500">React Native</span>. Team lead of a
-            mobile project in Aeto and a resilient developer.
+            Experienced{" "}
+            <span className="font-bold text-gray-400">JavaScript</span> and{" "}
+            <span className="font-bold text-gray-400">TypeScript</span>{" "}
+            developer specializing in{" "}
+            <span className="font-bold text-gray-400">React</span> and{" "}
+            <span className="font-bold text-gray-400">React Native</span>. Team
+            lead of a mobile project in <a href="https://www.aeto.com.mx/" className="underline underline-offset-4 decoration-dashed hover:text-gray-300">Aeto</a> and a resilient developer.
           </p>
           <div className="flex flex-row gap-4">
-            <button className="btn-primary">
-              Experience
-            </button>
-            <button className="btn-outline">
-              Summary
-            </button>
+            <button className="btn-primary">Experience</button>
+            <button className="btn-outline">Summary</button>
           </div>
           <div className="flex flex-row flex-wrap items-center justify-center lg:justify-start gap-4 mt-1">
             <a

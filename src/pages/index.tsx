@@ -1,4 +1,4 @@
-import { Header, Hero } from "@/components";
+import { About, Header, Hero } from "@/components";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -12,6 +12,7 @@ const index = () => {
       <Header />
       <main className="max-w-screen-lg m-auto">
         <Hero />
+        <About />
       </main>
       <footer></footer>
     </div>
