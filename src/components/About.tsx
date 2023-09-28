@@ -1,71 +1,82 @@
-export const About = () => {
+import React, { LegacyRef } from "react";
+import { TimeLine } from ".";
+
+interface Props {
+  ref?: LegacyRef<HTMLElement>;
+}
+
+export const About: React.FC<Props> = ({ ref }) => {
   return (
     <section
       id="about"
-      className="flex flex-col gap-4 h-screen max-w-screen-lg pt-20 px-2"
+      className="flex flex-col gap-4 min-h-screen max-w-screen-lg pt-20 pb-10 px-4"
+      ref={ref}
     >
-      <article>
+      <article className="flex flex-col gap-2">
         <h2 className="text-4xl lg:text-6xl font-medium text-gray-300 mb-2">
           About
         </h2>
+        <h3 className="text-2xl lg:text-3xl font-medium text-gray-400 mb-2">
+          Summary
+        </h3>
         <p className="text-gray-500 lg:text-lg">
-          Experienced Frontend Engineer with 2+ years of expertise in JavaScript
-          and TypeScript, including proficiency in unit testing with Jest and
-          Vite Test. Skilled in implementing software architecture, design
-          patterns, and maintaining clean, SOLID code. Proficient in Git version
-          control and seasoned as a lead developer in React and React Native
-          projects. Committed to delivering exceptional user experiences and
-          staying current with industry trends.
+          Experienced Frontend Developer with 2+ years of expertise in
+          JavaScript and TypeScript, including proficiency in unit testing with
+          Jest and Vite Test. Skilled in implementing software architecture,
+          design patterns, and maintaining clean, SOLID code.
+        </p>
+        <p className="text-gray-500 lg:text-lg">
+          Proficient in Git version control and seasoned as a lead developer in
+          React and React Native projects. Committed to delivering exceptional
+          user experiences and staying current with industry trends.
         </p>
       </article>
 
       <article id="experience" className="flex flex-col gap-4">
-        <h3 className="text-2xl lg:text-4xl font-medium text-gray-300 mb-2">
+        <h3 className="text-2xl lg:text-3xl font-medium text-gray-400 mb-2">
           Experience
         </h3>
-        <ol className="relative border-l border-gray-200 dark:border-gray-700">
-          <li className="mb-10 ml-4">
-            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-            <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              February 2022
-            </time>
-            <h3 className="text-lg font-semibold text-gray-300">
-              Application UI code in Tailwind CSS
-            </h3>
-            <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-              Get access to over 20+ pages including a dashboard layout, charts,
-              kanban board, calendar, and pre-order E-commerce & Marketing
-              pages.
+        <TimeLine>
+          <TimeLine.Element
+            date="February 2022"
+            title="FrontEnd Developer in Aeto"
+          >
+            <p className="text-gray-500">
+              As a Frontend Developer specializing in React and React Native
+              with TypeScript, leadership is demonstrated by guiding a team of
+              two professionals in the development of a mobile application.
+              Embracing industry best practices, this role enforces Git flow,
+              design patterns, testing, clean code, and the SOLID principle.
             </p>
-          </li>
-          <li className="mb-10 ml-4">
-            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-            <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              March 2022
-            </time>
-            <h3 className="text-lg font-semibold text-gray-300">
-              Marketing UI design in Figma
-            </h3>
-            <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-              All of the pages and components are first designed in Figma and we
-              keep a parity between the two versions even as we update the
-              project.
+
+            <ul className="flex flex-row flex-wrap gap-4 mt-2 text-gray-400 font-medium">
+              <li>Javascript</li>
+              <li>Typescript</li>
+              <li>React</li>
+              <li>React Native</li>
+              <li>Redux-Toolkit</li>
+            </ul>
+          </TimeLine.Element>
+        </TimeLine>
+      </article>
+
+      <article id="experience" className="flex flex-col gap-4">
+        <h3 className="text-2xl lg:text-3xl font-medium text-gray-400 mb-2">
+          Education
+        </h3>
+        <TimeLine>
+          <TimeLine.Element
+            title="Informática Administrativa in Universidad Ciudadana de Nuevo León"
+            date="May 2023"
+          >
+            <p className="text-gray-500">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+              aperiam itaque voluptates nulla ex nisi quos corrupti commodi
+              nostrum accusantium quibusdam doloribus quo dolores, deserunt ea
+              reprehenderit. Ex, eveniet commodi!
             </p>
-          </li>
-          <li className="ml-4">
-            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-            <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              April 2022
-            </time>
-            <h3 className="text-lg font-semibold text-gray-300">
-              E-Commerce UI code in Tailwind CSS
-            </h3>
-            <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-              Get started with dozens of web components and interactive elements
-              built on top of Tailwind CSS.
-            </p>
-          </li>
-        </ol>
+          </TimeLine.Element>
+        </TimeLine>
       </article>
     </section>
   );

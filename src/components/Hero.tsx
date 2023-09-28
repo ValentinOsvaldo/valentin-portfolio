@@ -30,10 +30,10 @@ export const Hero = () => {
             <span className="font-bold text-gray-400">React Native</span>. Team
             lead of a mobile project in <a href="https://www.aeto.com.mx/" className="underline underline-offset-4 decoration-dashed hover:text-gray-300">Aeto</a> and a resilient developer.
           </p>
-          <div className="flex flex-row gap-4">
+          {/* <div className="flex flex-row gap-4">
             <button className="btn-primary">Experience</button>
             <button className="btn-outline">Summary</button>
-          </div>
+          </div> */}
           <div className="flex flex-row flex-wrap items-center justify-center lg:justify-start gap-4 mt-1">
             <a
               href="#"
