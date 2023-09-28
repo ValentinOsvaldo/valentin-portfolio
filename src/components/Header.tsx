@@ -21,8 +21,8 @@ export const Header = () => {
   return (
     <header className="w-full fixed top-0 z-50">
       <nav className="bg-zinc-900/50 backdrop-blur p-4">
-        <section className="flex justify-between items-center max-w-screen-lg m-auto">
-          <h1 className="text-2xl font-bold">Osvaldo Valentin</h1>
+        <section className="flex justify-end items-center max-w-screen-lg m-auto">
+          {/* <h1 className="text-2xl font-bold">Osvaldo Valentin</h1> */}
           <button
             className="lg:hidden"
             onClick={() => setIsOpenMenu(!isOpenMenu)}
@@ -54,18 +54,31 @@ export const Header = () => {
           isOpenMenu ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <a href="#about" className="header-tag">
+        <a
+          href="#about"
+          className="header-tag"
+          onClick={() => setIsOpenMenu(false)}
+        >
           about
         </a>
-        <a href="#projects" className="header-tag">
+        <a
+          href="#projects"
+          className="header-tag"
+          onClick={() => setIsOpenMenu(false)}
+        >
           projects
         </a>
-        <a href="#contact" className="header-tag">
+        <a
+          href="#contact"
+          className="header-tag"
+          onClick={() => setIsOpenMenu(false)}
+        >
           contact
         </a>
         <a
           href="#"
           className="capitalize text-xl font-medium px-4 py-2 rounded-md transition-all bg-white text-black"
+          onClick={() => setIsOpenMenu(false)}
         >
           Resume
         </a>
