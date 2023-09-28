@@ -5,12 +5,13 @@ import image from "../assets/portfolio.jpg";
 export const Hero = () => {
   return (
     <section className="flex items-center h-screen p-4 max-w-screen-lg">
-      <article className="flex flex-col items-center gap-4 lg:flex-row-reverse">
-        <div className="hidden lg:block">
+      <article className="flex flex-col items-center gap-8 lg:flex-row-reverse">
+        <div className="hidden select-none lg:block">
           <Image
             src={image}
             alt="Osvaldo Valentin"
             className="rounded-full w-full grayscale max-w-[400px]"
+            loading="lazy"
           />
         </div>
         <div className="flex flex-col items-center justify-center lg:items-start gap-3">
