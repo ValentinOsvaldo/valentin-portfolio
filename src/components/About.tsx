@@ -49,7 +49,7 @@ export const About: React.FC<Props> = ({ ref }) => {
               design patterns, testing, clean code, and the SOLID principle.
             </p>
 
-            <ul className="flex flex-row flex-wrap gap-4 mt-2 text-gray-400 font-medium">
+            <ul className="flex flex-row flex-wrap gap-x-4 mt-2 text-gray-400 font-medium">
               <li>Javascript</li>
               <li>Typescript</li>
               <li>React</li>
