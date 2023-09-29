@@ -16,7 +16,7 @@ html::-webkit-scrollbar {
 
 @layer base {
   body {
-    @apply bg-gradient-to-b from-zinc-900 to-zinc-950 bg-fixed text-white;
+    @apply bg-zinc-950 bg-gradient-to-b from-zinc-900 to-zinc-950 bg-center bg-cover bg-fixed text-white;
   }
 }
 
