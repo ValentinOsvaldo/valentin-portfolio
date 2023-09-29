@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { MdOutlineMenu, MdClose } from "react-icons/md";
 
 export const Header = () => {
