@@ -20,8 +20,8 @@ export const Header = () => {
 
   return (
     <header className="w-full fixed top-0 z-50">
-      <nav className="bg-zinc-900/50 backdrop-blur p-4">
-        <section className="flex justify-end items-center max-w-screen-lg m-auto">
+      <nav className={`${!isOpenMenu && "bg-zinc-900/50 backdrop-blur"} p-4`}>
+        <section className="flex justify-end items-center max-w-screen-lg m-auto relative z-50">
           <button
             className="lg:hidden"
             onClick={() => setIsOpenMenu(!isOpenMenu)}
@@ -49,7 +49,7 @@ export const Header = () => {
       </nav>
 
       <section
-        className={`flex flex-col justify-center items-center gap-2 fixed w-full h-full left-0 transition-all duration-300 bg-zinc-900/50 backdrop-blur ${
+        className={`flex flex-col justify-center items-center top-0 gap-2 fixed w-full h-full left-0 transition-all duration-300 bg-zinc-900/50 backdrop-blur ${
           isOpenMenu ? "translate-x-0" : "translate-x-full"
         }`}
       >
