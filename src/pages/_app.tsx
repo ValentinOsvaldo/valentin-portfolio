@@ -2,19 +2,21 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
-import { Poppins } from "next/font/google";
+import { Inter } from "next/font/google";
 
-const poppins = Poppins({
-  weight: ["300", "400", "500", "700", "800"],
+const inter = Inter({
+  weight: ["300", "400", "500", "700", "800", "900"],
   subsets: ["latin"],
-  variable: "--font-poppins",
+  variable: "--font-inter",
 });
 
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={`${poppins.className}`}>
-      
+    <div className={`${inter.className} ${inter.variable}`}>
+      <Head>
+        <title>Osvaldo Valentin</title>
+      </Head>
       <Component {...pageProps} />
     </div>
   );

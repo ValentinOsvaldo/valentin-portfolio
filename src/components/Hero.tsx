@@ -1,10 +1,18 @@
-import Image from "next/image";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import image from "../assets/portfolio.jpg";
+import Image from 'next/image';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import image from '../assets/portfolio.jpg';
+import { FC, ForwardedRef } from 'react';
 
-export const Hero = () => {
+interface Props {
+  ref?: ForwardedRef<HTMLElement>;
+}
+
+export const Hero: FC<Props> = ({ ref }) => {
   return (
-    <section className="flex items-center h-screen p-4 max-w-screen-lg">
+    <section
+      className="flex items-center h-screen p-4 max-w-screen-lg"
+      ref={ref}
+    >
       <article className="flex flex-col items-center gap-8 lg:flex-row-reverse">
         <div className="hidden select-none lg:block">
           <Image
@@ -22,19 +30,19 @@ export const Hero = () => {
             FrontEnd Developer
           </h3>
           <p className="text-center lg:text-left font-medium text-lg text-gray-500">
-            Experienced{" "}
-            <span className="font-bold text-gray-400">JavaScript</span> and{" "}
-            <span className="font-bold text-gray-400">TypeScript</span>{" "}
-            developer specializing in{" "}
-            <span className="font-bold text-gray-400">React</span> and{" "}
+            Experienced{' '}
+            <span className="font-bold text-gray-400">JavaScript</span> and{' '}
+            <span className="font-bold text-gray-400">TypeScript</span>{' '}
+            developer specializing in{' '}
+            <span className="font-bold text-gray-400">React</span> and{' '}
             <span className="font-bold text-gray-400">React Native</span>. Team
-            lead of a mobile project in{" "}
+            lead of a mobile project in{' '}
             <a
               href="https://www.aeto.com.mx/"
               className="underline underline-offset-4 decoration-dashed hover:text-gray-300"
             >
               Aeto
-            </a>{" "}
+            </a>{' '}
             and a resilient developer.
           </p>
           {/* <div className="flex flex-row gap-4">

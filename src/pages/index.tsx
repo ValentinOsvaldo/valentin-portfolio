@@ -1,4 +1,4 @@
-import { About, Header, Hero, Projects } from "@/components";
+import { About, Header, Hero, Projects } from '@/components';
 
 const index = () => {
   return (
