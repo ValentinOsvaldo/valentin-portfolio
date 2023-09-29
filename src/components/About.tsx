@@ -69,12 +69,12 @@ export const About: React.FC<Props> = ({ ref }) => {
             title="Informática Administrativa in Universidad Ciudadana de Nuevo León"
             date="May 2023"
           >
-            <p className="text-gray-500">
+            {/* <p className="text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
               aperiam itaque voluptates nulla ex nisi quos corrupti commodi
               nostrum accusantium quibusdam doloribus quo dolores, deserunt ea
               reprehenderit. Ex, eveniet commodi!
-            </p>
+            </p> */}
           </TimeLine.Element>
         </TimeLine>
       </article>
