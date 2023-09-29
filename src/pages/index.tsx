@@ -1,4 +1,4 @@
-import { About, Header, Hero } from "@/components";
+import { About, Header, Hero, Projects } from "@/components";
 
 const index = () => {
   return (
@@ -7,6 +7,7 @@ const index = () => {
       <main className="max-w-screen-lg m-auto">
         <Hero />
         <About />
+        <Projects />
       </main>
       <footer></footer>
     </div>
