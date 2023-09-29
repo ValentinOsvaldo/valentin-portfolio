@@ -28,7 +28,14 @@ export const Hero = () => {
             developer specializing in{" "}
             <span className="font-bold text-gray-400">React</span> and{" "}
             <span className="font-bold text-gray-400">React Native</span>. Team
-            lead of a mobile project in <a href="https://www.aeto.com.mx/" className="underline underline-offset-4 decoration-dashed hover:text-gray-300">Aeto</a> and a resilient developer.
+            lead of a mobile project in{" "}
+            <a
+              href="https://www.aeto.com.mx/"
+              className="underline underline-offset-4 decoration-dashed hover:text-gray-300"
+            >
+              Aeto
+            </a>{" "}
+            and a resilient developer.
           </p>
           {/* <div className="flex flex-row gap-4">
             <button className="btn-primary">Experience</button>
@@ -36,13 +43,17 @@ export const Hero = () => {
           </div> */}
           <div className="flex flex-row flex-wrap items-center justify-center lg:justify-start gap-4 mt-1">
             <a
-              href="#"
+              href="https://github.com/ValentinOsvaldo"
+              rel="noopener noreferrer"
+              target="_blank"
               className="text-gray-500 transition-all hover:text-gray-300 hover:drop-shadow-[0px_0px_8px_rgba(255,255,255,0.35)]"
             >
               <FaGithub size={36} />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/valentin-osvaldo/"
+              rel="noopener noreferrer"
+              target="_blank"
               className="text-gray-500 transition-all hover:text-gray-300 hover:drop-shadow-[0px_0px_8px_rgba(255,255,255,0.35)]"
             >
               <FaLinkedin size={36} />
