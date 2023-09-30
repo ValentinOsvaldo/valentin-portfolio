@@ -1,16 +1,16 @@
 import { About, Header, Hero, Projects } from '@/components';
+import { Layout } from '@/layout';
 
 const index = () => {
   return (
-    <div>
+    <Layout>
       <Header />
       <main className="max-w-screen-lg m-auto">
         <Hero />
         <About />
         <Projects />
       </main>
-      <footer></footer>
-    </div>
+    </Layout>
   );
 };
 

@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Country Quiz App",
+    "description": "Explore my world of web development expertise through this sleek and dynamic portfolio. Specializing in React, TypeScript, and the Context API, I've crafted interactive experiences, including a captivating Country Quiz Game. Leveraging the power of an external API (https://restcountries.com/), I create seamless connections to real-world data. Immerse yourself in my projects, witness my skills in action, and discover the possibilities of modern web technologies. Let's bring your digital ideas to life!",
+    "stack": ["React", "Typescript"],
+    "code": "https://github.com/ValentinOsvaldo/country-quiz",
+    "demo": "https://country-quiz-eosin.vercel.app/"
+  }
+]
