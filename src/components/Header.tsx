@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link }  from 'react-scroll';
 import { MdOutlineMenu, MdClose } from "react-icons/md";
 
 export const Header = () => {
@@ -28,19 +29,19 @@ export const Header = () => {
           >
             {isOpenMenu ? <MdClose size={32} /> : <MdOutlineMenu size={32} />}
           </button>
-          <div className="hidden lg:flex lg:gap-4">
-            <a href="#about" className="header-tag">
+          <div className="hidden lg:flex items-center lg:gap-4">
+            <Link to="about" smooth spy className="header-tag" offset={-100} duration={100}>
               about
-            </a>
-            <a href="#projects" className="header-tag">
+            </Link>
+            <Link to="projects" smooth spy className="header-tag" offset={-100} duration={100}>
               projects
-            </a>
-            <a href="#contact" className="header-tag">
+            </Link>
+            <Link to="contact" smooth spy className="header-tag" offset={-100} duration={100}>
               contact
-            </a>
+            </Link>
             <a
               href="#"
-              className="select-none capitalize font-medium px-4 py-2 rounded-md transition-all bg-white text-black"
+              className="btn-outline"
             >
               Resume
             </a>
@@ -76,7 +77,7 @@ export const Header = () => {
         </a>
         <a
           href="#"
-          className="capitalize text-xl font-medium px-4 py-2 select-none rounded-md transition-all bg-white text-black"
+          className="btn-outline"
           onClick={() => setIsOpenMenu(false)}
         >
           Resume

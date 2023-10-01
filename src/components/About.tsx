@@ -1,11 +1,8 @@
-import React, { LegacyRef } from "react";
+import React, { ForwardedRef, forwardRef } from "react";
 import { TimeLine } from ".";
 
-interface Props {
-  ref?: LegacyRef<HTMLElement>;
-}
 
-export const About: React.FC<Props> = ({ ref }) => {
+export const About = forwardRef((props, ref: ForwardedRef<HTMLElement>) => {
   return (
     <section
       id="about"
@@ -80,4 +77,4 @@ export const About: React.FC<Props> = ({ ref }) => {
       </article>
     </section>
   );
-};
+});

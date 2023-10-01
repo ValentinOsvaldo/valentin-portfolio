@@ -1,9 +1,18 @@
 [
   {
     "title": "Country Quiz App",
-    "description": "Explore my world of web development expertise through this sleek and dynamic portfolio. Specializing in React, TypeScript, and the Context API, I've crafted interactive experiences, including a captivating Country Quiz Game. Leveraging the power of an external API (https://restcountries.com/), I create seamless connections to real-world data. Immerse yourself in my projects, witness my skills in action, and discover the possibilities of modern web technologies. Let's bring your digital ideas to life!",
-    "stack": ["React", "Typescript"],
+    "description": "Dive into the world of geography with my Country Quiz Game, a thrilling React project built entirely with TypeScript and integrated with the external API, restcountries.com. Challenge your knowledge about countries, capitals, and flags while enjoying a seamless user experience. With the power of the Context API, the game tracks your score as you answer questions. Each correct answer boosts your points, but be careful, a wrong answer ends the game. It's not just a quiz; it's an educational journey into the diverse cultures of the world. Are you ready to test your global knowledge? Let the quiz begin!",
+    "stack": ["React", "Context API", "Typescript", "Axios"],
     "code": "https://github.com/ValentinOsvaldo/country-quiz",
-    "demo": "https://country-quiz-eosin.vercel.app/"
+    "demo": "https://country-quiz-eosin.vercel.app/",
+    "image": "https://res.cloudinary.com/dmwnb8bns/image/upload/v1696114582/portfolio/Screenshot_2023-01-20_005927_d3pzal.png"
+  },
+  {
+    "title": "Weather App",
+    "description": "Welcome to Weather App, your ultimate weather companion built with React, TypeScript, and the efficient Context API. This app offers instant weather updates tailored to your location or any destination worldwide. With seamless GPS integration and a user-friendly interface, Weather App delivers accurate weather forecasts effortlessly. Whether you're planning your day or a trip, Weather App ensures you're always weather-ready. Stay informed, stay prepared - it's weather, your way.",
+    "stack": ["React", "Context API", "Typescript", "GPS"],
+    "code": "https://github.com/ValentinOsvaldo/react-weather-app",
+    "demo": "https://weather-app-valentinosvaldo.vercel.app/",
+    "image": "https://res.cloudinary.com/dmwnb8bns/image/upload/v1696115381/portfolio/68747470733a2f2f692e696d6775722e636f6d2f6d526530724b6f2e706e67_ogi0kr.png"
   }
 ]
