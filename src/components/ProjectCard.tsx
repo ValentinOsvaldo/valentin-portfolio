@@ -1,18 +1,43 @@
-import { FC } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
+import { motion, useAnimation, useInView } from 'framer-motion';
 import { FaGithub, FaLink } from 'react-icons/fa';
+
 import { Project } from '@/models';
 
 interface Props {
   project: Project;
   onClick?: () => void;
+  delayAnimation?: number;
 }
 
-export const ProjectCard: FC<Props> = ({ project, onClick }) => {
+export const ProjectCard: FC<Props> = ({
+  project,
+  delayAnimation = 1,
+  onClick,
+}) => {
   const { description, stack, title, code, demo, image } = project;
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { margin: '0px 100px -50px 0px' });
+  const animationControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) animationControls.start('visible');
+  }, [isInView]);
+
   return (
-    <div className="bg-zinc-900 rounded-lg p-4 relative bg-clip-padding group before:absolute before:transition-all before:inset-0 before:opacity-0 hover:before:opacity-100 before:bg-gradient-to-br before:from-zinc-400/90 before:to-zinc-900 before:rounded-lg before:content-[''] before:z-[-1] before:m-[-1px]">
+    <motion.div
+      className="bg-zinc-900 rounded-lg p-4 relative bg-clip-padding group before:absolute before:transition-all before:inset-0 before:opacity-0 hover:before:opacity-100 before:bg-gradient-to-br before:from-zinc-400/90 before:to-zinc-900 before:rounded-lg before:content-[''] before:z-[-1] before:m-[-1px]"
+      ref={ref}
+      animate={animationControls}
+      initial="hidden"
+      transition={{ duration: 0.75, delay: delayAnimation }}
+      variants={{
+        hidden: { opacity: 0, y: -75 },
+        visible: { opacity: 1, y: 0 },
+      }}
+    >
       {!!image ? (
         <Image
           src={image}
@@ -86,6 +111,6 @@ export const ProjectCard: FC<Props> = ({ project, onClick }) => {
           ))}
         </ul>
       )}
-    </div>
+    </motion.div>
   );
 };

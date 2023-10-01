@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ProjectCard, ProjectModal } from '.';
 import { ProjectModalContext } from '@/context/project-modal';
-import projects from '../data/projects.json'
+import projects from '../data/projects.json';
 
 export const Projects = () => {
   const { closeModal, openModal, project, isVisible } =
@@ -17,9 +17,14 @@ export const Projects = () => {
       </h2>
 
       <article className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        { projects.map(project => (
-          <ProjectCard project={project} key={project.title} onClick={() => openModal(project)} />
-        )) }
+        {projects.map((project, index) => (
+          <ProjectCard
+            project={project}
+            key={project.title}
+            delayAnimation={+`.${(index + 1) + 5}`}
+            onClick={() => openModal(project)}
+          />
+        ))}
       </article>
 
       <ProjectModal

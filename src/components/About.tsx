@@ -6,31 +6,33 @@ import { TimeLine } from '.';
 
 export const About = () => {
   const ref = useRef<HTMLElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '0px 100px -50px 0px' });
-  const mainControls = useAnimation();
+  const isInView = useInView(ref, {
+    once: true,
+    margin: '0px 100px -50px 0px',
+  });
+  const aboutControls = useAnimation();
 
   useEffect(() => {
     if (isInView) {
-      mainControls.start('visible');
+      aboutControls.start('visible');
     }
-    console.log(isInView);
   }, [isInView]);
 
   return (
     <section
       id="about"
       className="flex flex-col gap-4 min-h-screen max-w-screen-lg mb-10 px-4 relative overflow-hidden"
+      ref={ref}
     >
       <motion.article
         className="flex flex-col gap-2"
         initial="hidden"
-        animate={mainControls}
+        animate={aboutControls}
         transition={{ duration: 1 }}
         variants={{
           hidden: { opacity: 0, x: 75 },
           visible: { opacity: 1, x: 0 },
         }}
-        ref={ref}
       >
         <h2 className="text-4xl lg:text-6xl font-medium text-gray-300 mb-2">
           About
@@ -51,7 +53,17 @@ export const About = () => {
         </p>
       </motion.article>
 
-      <article id="experience" className="flex flex-col gap-4">
+      <motion.article
+        id="experience"
+        className="flex flex-col gap-4"
+        initial="hidden"
+        animate={aboutControls}
+        transition={{ duration: 1 }}
+        variants={{
+          hidden: { opacity: 0, x: 100 },
+          visible: { opacity: 1, x: 0 },
+        }}
+      >
         <h3 className="text-2xl lg:text-3xl font-medium text-gray-400 mb-2">
           Experience
         </h3>
@@ -77,9 +89,19 @@ export const About = () => {
             </ul>
           </TimeLine.Element>
         </TimeLine>
-      </article>
+      </motion.article>
 
-      <article id="experience" className="flex flex-col gap-4">
+      <motion.article
+        id="experience"
+        className="flex flex-col gap-4"
+        initial="hidden"
+        animate={aboutControls}
+        transition={{ duration: 1 }}
+        variants={{
+          hidden: { opacity: 0, x: 175 },
+          visible: { opacity: 1, x: 0 },
+        }}
+      >
         <h3 className="text-2xl lg:text-3xl font-medium text-gray-400 mb-2">
           Education
         </h3>
@@ -89,7 +111,7 @@ export const About = () => {
             date="May 2023"
           ></TimeLine.Element>
         </TimeLine>
-      </article>
+      </motion.article>
     </section>
   );
 };

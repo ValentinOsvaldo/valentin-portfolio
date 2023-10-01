@@ -81,7 +81,7 @@ export const Header = () => {
       </motion.nav>
 
       <section
-        className={`flex flex-col justify-center items-center top-0 gap-2 fixed w-full h-full left-0 transition-all duration-300 bg-zinc-900/50 backdrop-blur ${
+        className={`flex flex-col justify-center items-center inset-0 gap-2 fixed w-full h-full transition-all duration-300 bg-zinc-900/50 backdrop-blur bg-fixed bg-cover ${
           isOpenMenu ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
