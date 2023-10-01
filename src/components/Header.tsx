@@ -55,12 +55,17 @@ export const Header = () => {
               smooth
               spy
               className="header-tag"
-              offset={-100}
+              offset={0}
               duration={100}
             >
               contact
             </Link>
-            <a href="#" className="btn-primary">
+            <a
+              href="/osvaldo_valentin_garcia.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
               Resume
             </a>
           </div>
@@ -99,14 +104,16 @@ export const Header = () => {
           smooth
           spy
           className="header-tag"
-          offset={-100}
+          offset={0}
           duration={100}
           onClick={() => setIsOpenMenu(false)}
         >
           contact
         </Link>
         <a
-          href="#"
+          href="/osvaldo_valentin_garcia.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn-primary"
           onClick={() => setIsOpenMenu(false)}
         >

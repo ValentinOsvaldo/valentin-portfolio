@@ -45,10 +45,6 @@ export const Hero: FC<Props> = ({ ref }) => {
             </a>{' '}
             and a resilient developer.
           </p>
-          {/* <div className="flex flex-row gap-4">
-            <button className="btn-primary">Experience</button>
-            <button className="btn-outline">Summary</button>
-          </div> */}
           <div className="flex flex-row flex-wrap items-center justify-center lg:justify-start gap-4 mt-1">
             <a
               href="https://github.com/ValentinOsvaldo"
