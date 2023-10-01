@@ -1,31 +1,27 @@
-import React, { useEffect, useRef } from 'react';
-
-import { motion, useAnimation, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import { TimeLine } from '.';
+import { useAnimateComponent } from '@/hooks';
+
+const options = {
+  unique: true,
+  margin: '0px 200px 0px 0px',
+};
 
 export const About = () => {
-  const ref = useRef<HTMLElement>(null);
-  const isInView = useInView(ref, {
-    once: true,
-    margin: '0px 100px -50px 0px',
-  });
-  const aboutControls = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      aboutControls.start('visible');
-    }
-  }, [isInView]);
+  const [aboutRef, aboutControls] = useAnimateComponent<HTMLElement>(options);
+  const [experienceRef, experienceControls] =
+    useAnimateComponent<HTMLElement>(options);
+  const [eduRef, eduControls] = useAnimateComponent<HTMLElement>(options);
 
   return (
     <section
       id="about"
       className="flex flex-col gap-4 min-h-screen max-w-screen-lg mb-10 px-4 relative overflow-hidden"
-      ref={ref}
     >
       <motion.article
         className="flex flex-col gap-2"
+        ref={aboutRef}
         animate={aboutControls}
         initial="hidden"
         transition={{ duration: 1 }}
@@ -56,9 +52,10 @@ export const About = () => {
       <motion.article
         id="experience"
         className="flex flex-col gap-4"
+        ref={experienceRef}
         initial="hidden"
-        animate={aboutControls}
-        transition={{ duration: 1 }}
+        animate={experienceControls}
+        transition={{ duration: 1, delay: .5 }}
         variants={{
           hidden: { opacity: 0, x: 100 },
           visible: { opacity: 1, x: 0 },
@@ -95,10 +92,11 @@ export const About = () => {
         id="experience"
         className="flex flex-col gap-4"
         initial="hidden"
-        animate={aboutControls}
-        transition={{ duration: 1 }}
+        ref={eduRef}
+        animate={eduControls}
+        transition={{ duration: 1, delay: 0.5 }}
         variants={{
-          hidden: { opacity: 0, x: 175 },
+          hidden: { opacity: 0, x: 100 },
           visible: { opacity: 1, x: 0 },
         }}
       >

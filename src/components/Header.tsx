@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 
 import { Link } from 'react-scroll';
-import { motion } from 'framer-motion';
 import { MdOutlineMenu, MdClose } from 'react-icons/md';
 
 export const Header = () => {
@@ -23,13 +22,7 @@ export const Header = () => {
 
   return (
     <header className="w-full fixed top-0 z-50">
-      <motion.nav
-        className={`${!isOpenMenu && 'bg-zinc-900/50 backdrop-blur'} p-4`}
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        exit={{ opacity: 0, y: -50 }}
-      >
+      <nav className={`${!isOpenMenu && 'bg-zinc-900/50 backdrop-blur'} p-4`}>
         <section className="flex justify-end items-center max-w-screen-lg m-auto relative z-50">
           <button
             className="lg:hidden"
@@ -78,7 +71,7 @@ export const Header = () => {
             </a>
           </div>
         </section>
-      </motion.nav>
+      </nav>
 
       <section
         className={`flex flex-col justify-center items-center inset-0 gap-2 fixed w-full h-full transition-all duration-300 bg-zinc-900/50 backdrop-blur bg-fixed bg-cover ${
