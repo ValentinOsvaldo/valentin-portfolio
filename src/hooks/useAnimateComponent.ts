@@ -1,7 +1,10 @@
-import { useAnimation, useInView } from 'framer-motion';
-import { RefObject, useEffect } from 'react';
+import { AnimationControls, useAnimation, useInView } from 'framer-motion';
+import { RefObject, createRef, useEffect, useRef } from 'react';
 
-export const useAnimateComponent = <T extends Element>(ref: RefObject<T>) => {
+type AnimateComponent<T extends Element> = [RefObject<T>, AnimationControls];
+
+export const useAnimateComponent = <T extends Element> (): AnimateComponent<T> => {
+  const ref = useRef<T>(null);
   const isInView = useInView(ref);
   const controls = useAnimation();
 
@@ -11,5 +14,5 @@ export const useAnimateComponent = <T extends Element>(ref: RefObject<T>) => {
     }
   }, [isInView]);
 
-  return [controls, isInView];
+  return [ref, controls];
 };

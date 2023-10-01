@@ -4,16 +4,29 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 import image from '../assets/portfolio.jpg';
+import { useAnimateComponent } from '@/hooks';
 
 export const Hero = () => {
+  const [titleRef, titleControls] = useAnimateComponent<HTMLHeadingElement>();
+  const [subTitleRef, subControls] = useAnimateComponent<HTMLHeadingElement>();
+  const [summaryRef, summaryControls] =
+    useAnimateComponent<HTMLParagraphElement>();
+  const [elementRef, elementControls] = useAnimateComponent<HTMLDivElement>();
+  const [photoRef, photoControls] = useAnimateComponent<HTMLDivElement>();
+
   return (
     <section className="flex items-center h-screen p-4 max-w-screen-lg overflow-hidden">
       <article className="flex flex-col items-center gap-8 lg:flex-row-reverse">
         <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
           className="hidden select-none lg:block"
+          ref={photoRef}
+          animate={photoControls}
+          initial="hidden"
+          transition={{ duration: 1 }}
+          variants={{
+            hidden: { opacity: 0, x: -100 },
+            visible: { opacity: 1, x: 0 },
+          }}
         >
           <Image
             src={image}
@@ -22,19 +35,44 @@ export const Hero = () => {
             loading="lazy"
           />
         </motion.div>
-        <motion.div
-          className="flex flex-col items-center justify-center lg:items-start gap-3"
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <h2 className="text-center lg:text-left text-5xl font-extrabold">
+        <div className="flex flex-col items-center justify-center lg:items-start gap-3">
+          <motion.h2
+            ref={titleRef}
+            className="text-center lg:text-left text-5xl font-extrabold"
+            animate={titleControls}
+            initial="hidden"
+            transition={{ duration: 1 }}
+            variants={{
+              hidden: { opacity: 0, x: 75 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             Osvaldo Valentin Garcia
-          </h2>
-          <h3 className="text-center lg:text-left text-3xl font-bold text-gray-400">
+          </motion.h2>
+          <motion.h3
+            className="text-center lg:text-left text-3xl font-bold text-gray-400"
+            ref={subTitleRef}
+            animate={subControls}
+            initial="hidden"
+            transition={{ duration: 1, delay: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: 75 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             FrontEnd Developer
-          </h3>
-          <p className="text-center lg:text-left font-medium text-lg text-gray-500">
+          </motion.h3>
+          <motion.p
+            className="text-center lg:text-left font-medium text-lg text-gray-500"
+            ref={summaryRef}
+            animate={summaryControls}
+            initial="hidden"
+            transition={{ duration: 1, delay: 0.75 }}
+            variants={{
+              hidden: { opacity: 0, x: 75 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             Experienced{' '}
             <span className="font-bold text-gray-400">JavaScript</span> and{' '}
             <span className="font-bold text-gray-400">TypeScript</span>{' '}
@@ -49,8 +87,18 @@ export const Hero = () => {
               Aeto
             </a>{' '}
             and a resilient developer.
-          </p>
-          <div className="flex flex-row flex-wrap items-center justify-center lg:justify-start gap-4 mt-1">
+          </motion.p>
+          <motion.div
+            className="flex flex-row flex-wrap items-center justify-center lg:justify-start gap-4 mt-1"
+            ref={elementRef}
+            animate={elementControls}
+            initial="hidden"
+            transition={{ duration: 1, delay: 1 }}
+            variants={{
+              hidden: { opacity: 0, x: 75 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <a
               href="https://github.com/ValentinOsvaldo"
               rel="noopener noreferrer"
@@ -67,8 +115,8 @@ export const Hero = () => {
             >
               <FaLinkedin size={36} />
             </a>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </article>
     </section>
   );

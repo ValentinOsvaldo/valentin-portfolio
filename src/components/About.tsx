@@ -26,8 +26,8 @@ export const About = () => {
     >
       <motion.article
         className="flex flex-col gap-2"
-        initial="hidden"
         animate={aboutControls}
+        initial="hidden"
         transition={{ duration: 1 }}
         variants={{
           hidden: { opacity: 0, x: 75 },

@@ -28,7 +28,7 @@ export const ProjectCard: FC<Props> = ({
 
   return (
     <motion.div
-      className="bg-zinc-900 rounded-lg p-4 relative bg-clip-padding group before:absolute before:transition-all before:inset-0 before:opacity-0 hover:before:opacity-100 before:bg-gradient-to-br before:from-zinc-400/90 before:to-zinc-900 before:rounded-lg before:content-[''] before:z-[-1] before:m-[-1px]"
+      className="bg-zinc-900 rounded-lg p-4 relative bg-clip-padding group"
       ref={ref}
       animate={animationControls}
       initial="hidden"

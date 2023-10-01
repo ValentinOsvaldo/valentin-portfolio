@@ -1,15 +1,12 @@
-import { useEffect, useRef } from 'react';
-import { motion, useAnimation, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { MdEmail } from 'react-icons/md';
+
 import { useAnimateComponent } from '@/hooks';
 
 export const Contact = () => {
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const textRef = useRef<HTMLHeadingElement>(null);
-  const emailRef = useRef<HTMLAnchorElement>(null);
-  const [titleControls] = useAnimateComponent(titleRef);
-  const [textControls] = useAnimateComponent(textRef);
-  const [emailControls] = useAnimateComponent(emailRef);
+  const [titleRef, titleControls] = useAnimateComponent<HTMLHeadingElement>();
+  const [textRef, textControls] = useAnimateComponent<HTMLHeadingElement>();
+  const [emailRef, emailControls] = useAnimateComponent<HTMLAnchorElement>();
 
   return (
     <section
@@ -63,7 +60,7 @@ export const Contact = () => {
         initial="hidden"
         transition={{ duration: 0.5, delay: 0.5 }}
         variants={{
-          hidden: { opacity: 0, scale: .75 },
+          hidden: { opacity: 0, scale: 0.75 },
           visible: { opacity: 1, scale: 1 },
         }}
       >
