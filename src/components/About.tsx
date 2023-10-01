@@ -30,19 +30,19 @@ export const About = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <h2 className="text-4xl lg:text-6xl font-medium text-gray-300 mb-2">
+        <h2 className="text-4xl lg:text-6xl font-medium text-zinc-300 mb-2">
           About
         </h2>
-        <h3 className="text-2xl lg:text-3xl font-medium text-gray-400 mb-2">
+        <h3 className="text-2xl lg:text-3xl font-medium text-zinc-400 mb-2">
           Summary
         </h3>
-        <p className="text-gray-500 lg:text-lg">
+        <p className="text-zinc-500 lg:text-lg">
           Experienced Frontend Developer with 2+ years of expertise in
           JavaScript and TypeScript, including proficiency in unit testing with
           Jest and Vite Test. Skilled in implementing software architecture,
           design patterns, and maintaining clean, SOLID code.
         </p>
-        <p className="text-gray-500 lg:text-lg">
+        <p className="text-zinc-500 lg:text-lg">
           Proficient in Git version control and seasoned as a lead developer in
           React and React Native projects. Committed to delivering exceptional
           user experiences and staying current with industry trends.
