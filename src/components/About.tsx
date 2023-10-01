@@ -1,13 +1,11 @@
-import React, { ForwardedRef, forwardRef } from "react";
-import { TimeLine } from ".";
+import React from 'react';
+import { TimeLine } from '.';
 
-
-export const About = forwardRef((props, ref: ForwardedRef<HTMLElement>) => {
+export const About = () => {
   return (
     <section
       id="about"
       className="flex flex-col gap-4 min-h-screen max-w-screen-lg pt-20 pb-10 px-4"
-      ref={ref}
     >
       <article className="flex flex-col gap-2">
         <h2 className="text-4xl lg:text-6xl font-medium text-gray-300 mb-2">
@@ -77,4 +75,4 @@ export const About = forwardRef((props, ref: ForwardedRef<HTMLElement>) => {
       </article>
     </section>
   );
-});
+};
