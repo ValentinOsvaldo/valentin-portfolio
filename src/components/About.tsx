@@ -1,13 +1,37 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+
+import { motion, useAnimation, useInView } from 'framer-motion';
+
 import { TimeLine } from '.';
 
 export const About = () => {
+  const ref = useRef<HTMLElement>(null);
+  const isInView = useInView(ref, { once: true, margin: '0px 100px -50px 0px' });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start('visible');
+    }
+    console.log(isInView);
+  }, [isInView]);
+
   return (
     <section
       id="about"
-      className="flex flex-col gap-4 min-h-screen max-w-screen-lg mb-10 px-4"
+      className="flex flex-col gap-4 min-h-screen max-w-screen-lg mb-10 px-4 relative overflow-hidden"
     >
-      <article className="flex flex-col gap-2">
+      <motion.article
+        className="flex flex-col gap-2"
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 1 }}
+        variants={{
+          hidden: { opacity: 0, x: 75 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        ref={ref}
+      >
         <h2 className="text-4xl lg:text-6xl font-medium text-gray-300 mb-2">
           About
         </h2>
@@ -25,7 +49,7 @@ export const About = () => {
           React and React Native projects. Committed to delivering exceptional
           user experiences and staying current with industry trends.
         </p>
-      </article>
+      </motion.article>
 
       <article id="experience" className="flex flex-col gap-4">
         <h3 className="text-2xl lg:text-3xl font-medium text-gray-400 mb-2">
@@ -63,8 +87,7 @@ export const About = () => {
           <TimeLine.Element
             title="Informática Administrativa in Universidad Ciudadana de Nuevo León"
             date="May 2023"
-          >
-          </TimeLine.Element>
+          ></TimeLine.Element>
         </TimeLine>
       </article>
     </section>

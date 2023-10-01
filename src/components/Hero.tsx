@@ -1,28 +1,33 @@
 import Image from 'next/image';
+
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+
 import image from '../assets/portfolio.jpg';
-import { FC, ForwardedRef } from 'react';
 
-interface Props {
-  ref?: ForwardedRef<HTMLElement>;
-}
-
-export const Hero: FC<Props> = ({ ref }) => {
+export const Hero = () => {
   return (
-    <section
-      className="flex items-center h-screen p-4 max-w-screen-lg"
-      ref={ref}
-    >
+    <section className="flex items-center h-screen p-4 max-w-screen-lg overflow-hidden">
       <article className="flex flex-col items-center gap-8 lg:flex-row-reverse">
-        <div className="hidden select-none lg:block">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="hidden select-none lg:block"
+        >
           <Image
             src={image}
             alt="Osvaldo Valentin"
             className="rounded-full w-full grayscale max-w-[400px]"
             loading="lazy"
           />
-        </div>
-        <div className="flex flex-col items-center justify-center lg:items-start gap-3">
+        </motion.div>
+        <motion.div
+          className="flex flex-col items-center justify-center lg:items-start gap-3"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <h2 className="text-center lg:text-left text-5xl font-extrabold">
             Osvaldo Valentin Garcia
           </h2>
@@ -63,7 +68,7 @@ export const Hero: FC<Props> = ({ ref }) => {
               <FaLinkedin size={36} />
             </a>
           </div>
-        </div>
+        </motion.div>
       </article>
     </section>
   );
