@@ -55,13 +55,13 @@ export const About = () => {
         ref={experienceRef}
         initial="hidden"
         animate={experienceControls}
-        transition={{ duration: 1, delay: .5 }}
+        transition={{ duration: 1, delay: 0.5 }}
         variants={{
           hidden: { opacity: 0, x: 100 },
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <h3 className="text-2xl lg:text-3xl font-medium text-gray-400 mb-2">
+        <h3 className="text-2xl lg:text-3xl font-medium text-zinc-400 mb-2">
           Experience
         </h3>
         <TimeLine>
@@ -69,7 +69,7 @@ export const About = () => {
             date="February 2022 - Present"
             title="FrontEnd Developer in Aeto"
           >
-            <p className="text-gray-500">
+            <p className="text-zinc-500">
               As a Frontend Developer specializing in React and React Native
               with TypeScript, leadership is demonstrated by guiding a team of
               two professionals in the development of a mobile application.
@@ -77,7 +77,7 @@ export const About = () => {
               design patterns, testing, clean code, and the SOLID principle.
             </p>
 
-            <ul className="flex flex-row flex-wrap gap-x-4 mt-2 text-gray-400 font-medium">
+            <ul className="flex flex-row flex-wrap gap-x-4 mt-2 text-zinc-400 font-medium">
               <li>Javascript</li>
               <li>Typescript</li>
               <li>React</li>
@@ -100,14 +100,25 @@ export const About = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <h3 className="text-2xl lg:text-3xl font-medium text-gray-400 mb-2">
+        <h3 className="text-2xl lg:text-3xl font-medium text-zinc-400 mb-2">
           Education
         </h3>
         <TimeLine>
           <TimeLine.Element
             title="Informática Administrativa in Universidad Ciudadana de Nuevo León"
             date="May 2023"
-          ></TimeLine.Element>
+          >
+            <p className="text-zinc-500">
+              I delved into subjects such as Accounting, Business
+              Administration, Microeconomics, Macroeconomics, and other key
+              administrative topics. Additionally, I honed my hard skills in
+              areas like database management, algorithms, Object-Oriented
+              Programming (OOP), web development, and computer networks. These
+              studies not only equipped me with technical expertise but also
+              enhanced my soft skills, such as problem-solving, strategic
+              thinking, and effective communication.
+            </p>
+          </TimeLine.Element>
         </TimeLine>
       </motion.article>
     </section>
