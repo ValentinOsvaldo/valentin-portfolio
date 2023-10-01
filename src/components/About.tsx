@@ -5,7 +5,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-col gap-4 min-h-screen max-w-screen-lg pt-20 pb-10 px-4"
+      className="flex flex-col gap-4 min-h-screen max-w-screen-lg mb-10 px-4"
     >
       <article className="flex flex-col gap-2">
         <h2 className="text-4xl lg:text-6xl font-medium text-gray-300 mb-2">

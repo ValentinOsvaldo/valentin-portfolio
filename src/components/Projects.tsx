@@ -9,7 +9,7 @@ export const Projects = () => {
 
   return (
     <section
-      className="flex flex-col gap-4 min-h-screen max-w-screen-lg pt-20 pb-10 px-4"
+      className="flex flex-col gap-4 min-h-screen max-w-screen-lg mb-10 px-4"
       id="projects"
     >
       <h2 className="text-4xl lg:text-6xl font-medium text-gray-300 mb-2">

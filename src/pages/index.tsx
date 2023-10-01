@@ -1,4 +1,4 @@
-import { About, Header, Hero, Projects } from '@/components';
+import { About, Contact, Header, Hero, Projects } from '@/components';
 import { Layout } from '@/layout';
 
 const index = () => {
@@ -9,6 +9,7 @@ const index = () => {
         <Hero />
         <About />
         <Projects />
+        <Contact />
       </main>
     </Layout>
   );
