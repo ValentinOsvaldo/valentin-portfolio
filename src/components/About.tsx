@@ -1,7 +1,21 @@
 import { motion } from 'framer-motion';
+import {
+  Angular,
+  Dart,
+  Firebase,
+  Git,
+  Github,
+  Jest,
+  Js,
+  Node,
+  Reactjs,
+  Reactts,
+  Tailwind,
+  TypeScript,
+} from '@react-symbols/icons';
 
-import { TimeLine } from '.';
 import { useAnimateComponent } from '@/hooks';
+import { TimeLine } from '.';
 
 const options = {
   unique: true,
@@ -13,6 +27,8 @@ export const About = () => {
   const [experienceRef, experienceControls] =
     useAnimateComponent<HTMLElement>(options);
   const [eduRef, eduControls] = useAnimateComponent<HTMLElement>(options);
+  const [skillsRef, skillsAnimation] =
+    useAnimateComponent<HTMLElement>(options);
 
   return (
     <section
@@ -120,6 +136,57 @@ export const About = () => {
             </p>
           </TimeLine.Element>
         </TimeLine>
+      </motion.article>
+
+      <motion.article
+        ref={skillsRef}
+        animate={skillsAnimation}
+        initial="hidden"
+        transition={{ duration: 1, delay: 0.75 }}
+        variants={{
+          hidden: { opacity: 0, x: 100 },
+          visible: { opacity: 1, x: 0 },
+        }}
+      >
+        <h3 className="text-2xl lg:text-3xl font-medium text-zinc-400 mb-2">
+          Stack
+        </h3>
+
+        <ul className="flex flex-row flex-wrap items-center gap-4">
+          <li className="icon">
+            <Js width={64} />
+          </li>
+          <li className="icon">
+            <TypeScript width={64} />
+          </li>
+          <li className="icon">
+            <Reactjs width={64} />
+          </li>
+          <li className="icon">
+            <Reactts width={64} />
+          </li>
+          <li className="icon">
+            <Angular width={64} />
+          </li>
+          <li className="icon">
+            <Jest width={64} />
+          </li>
+          <li className="icon">
+            <Node width={64} />
+          </li>
+          <li className="icon">
+            <Tailwind width={64} />
+          </li>
+          <li className="icon">
+            <Firebase width={64} />
+          </li>
+          <li className="icon">
+            <Git width={64} />
+          </li>
+          <li className="icon">
+            <Github width={64} />
+          </li>
+        </ul>
       </motion.article>
     </section>
   );
