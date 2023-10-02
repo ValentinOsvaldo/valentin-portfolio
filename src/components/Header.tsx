@@ -74,7 +74,7 @@ export const Header = () => {
       </nav>
 
       <section
-        className={`flex flex-col justify-center items-center inset-0 gap-2 fixed w-full h-full transition-all duration-300 bg-zinc-900/50 backdrop-blur bg-fixed bg-cover ${
+        className={`flex flex-col justify-center items-center inset-0 gap-4 fixed w-full h-full transition-all duration-300 bg-zinc-900/50 backdrop-blur bg-fixed bg-cover ${
           isOpenMenu ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -115,7 +115,7 @@ export const Header = () => {
           href="/osvaldo_valentin_garcia.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-primary"
+          className="btn-primary text-xl"
           onClick={() => setIsOpenMenu(false)}
         >
           Resume

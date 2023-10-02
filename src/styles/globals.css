@@ -22,7 +22,7 @@ html::-webkit-scrollbar {
 
 @layer components {
   .header-tag {
-    @apply capitalize cursor-pointer font-medium px-4 py-2 rounded-md transition-all hover:bg-white hover:text-black select-none;
+    @apply text-xl lg:text-base capitalize cursor-pointer font-medium px-4 py-2 rounded-md transition-all hover:bg-white hover:text-black select-none;
   }
 
   .header-tag.active {
