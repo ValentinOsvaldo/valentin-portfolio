@@ -11,7 +11,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col gap-2 items-center justify-center overflow-hidden min-h-screen max-w-screen-lg px-4"
+      className="flex flex-col gap-2 items-center justify-center relative overflow-hidden min-h-screen max-w-screen-lg px-4"
     >
       <motion.h2
         className="text-4xl lg:text-6xl font-medium text-zinc-400"

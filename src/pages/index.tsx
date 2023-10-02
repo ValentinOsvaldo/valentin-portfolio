@@ -5,7 +5,7 @@ const index = () => {
   return (
     <Layout>
       <Header />
-      <main className="max-w-screen-lg m-auto">
+      <main className="max-w-screen-lg m-auto relative overflow-hidden">
         <Hero />
         <About />
         <Projects />

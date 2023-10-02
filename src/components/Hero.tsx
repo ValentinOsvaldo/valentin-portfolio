@@ -15,7 +15,7 @@ export const Hero = () => {
   const [photoRef, photoControls] = useAnimateComponent<HTMLDivElement>();
 
   return (
-    <section className="flex items-center h-screen p-4 max-w-screen-lg overflow-hidden">
+    <section className="flex items-center h-screen p-4 max-w-screen-lg relative overflow-hidden">
       <article className="flex flex-col items-center gap-8 lg:flex-row-reverse">
         <motion.div
           className="hidden select-none lg:block"

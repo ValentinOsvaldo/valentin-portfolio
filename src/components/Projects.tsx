@@ -15,7 +15,7 @@ export const Projects = () => {
 
   return (
     <motion.section
-      className="flex flex-col gap-2 min-h-screen max-w-screen-lg px-4 overflow-hidden"
+      className="flex flex-col gap-2 min-h-screen max-w-screen-lg px-4 relative overflow-hidden"
       id="projects"
       ref={ref}
       animate={animate}
