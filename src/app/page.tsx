@@ -19,7 +19,7 @@ const page = () => {
             <a href="tel:+528123236394">📞+52-81-2323-6394</a>
             <span>{' | '}</span>
             <a
-              href="https://github.com/OsvaldoValentin"
+              href="https://github.com/ValentinOsvaldo"
               target="_blank"
               rel="noopener noreferrer"
             >
