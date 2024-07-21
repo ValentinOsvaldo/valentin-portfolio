@@ -1,9 +1,9 @@
-'use client';
-import { useTranslations } from 'next-intl';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { TimelineItem, TimelineList } from '@/components/resume/timeline';
 
-const Page = () => {
-  const t = useTranslations();
+const Page = async () => {
+  const locale = await getLocale();
+  const t = await getTranslations();
 
   return (
     <main className="max-w-screen-md mx-auto p-4">
@@ -56,7 +56,7 @@ const Page = () => {
             company="Aeto"
             endDate={t('work-experience.at-present')}
             jobTitle="Front-End Developer"
-            starDate={new Date('February 2022').toLocaleDateString('es', {
+            starDate={new Date('February 2022').toLocaleDateString(locale, {
               month: 'long',
               year: 'numeric',
             })}
@@ -82,7 +82,7 @@ const Page = () => {
 
         <TimelineList>
           <TimelineItem
-            starDate={new Date('May 2022').toLocaleDateString('es', {
+            starDate={new Date('May 2022').toLocaleDateString(locale, {
               month: 'long',
               year: 'numeric',
             })}
