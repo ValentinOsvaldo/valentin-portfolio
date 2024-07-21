@@ -1,13 +1,9 @@
 'use client';
-import { TimelineItem, TimelineList } from '@/components/resume/timeline';
-import { Button } from '@/components/ui/button';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
+import { TimelineItem, TimelineList } from '@/components/resume/timeline';
 
-const page = () => {
+const Page = () => {
   const t = useTranslations();
-
-  const locale = navigator.language.split('-')[0];
 
   return (
     <main className="max-w-screen-md mx-auto p-4">
@@ -99,4 +95,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
